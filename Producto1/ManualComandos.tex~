@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\title{Manual de comandos de Bash}
+\author {Jessica Isamar Uriarte Garcia}
+\date{Febrero 2015}
+
+\begin{document}
+
+\maketitle
+  
+  
+  
+  \section{¿Qué es {\tt bash}?}
+
+
+
+ {\tt Bash} es un interpretador de comandos utilizando sobre el sistema operativo {\tt Linux}.
+ Funciona como intermidario entre el usuario y el sistema operativo. \par
+ A continuación se mostrará una lista de comandos básicos con una descripción breve y un ejemplo. 
+
+
+
+
+ \section{Lista de Comandos}
+
+
+ 
+ 
+ \begin{enumerate}
+ 
+ 
+ \bigskip
+ \hline
+ \hline
+ 
+ 
+ \vspace \item {\tt ls.-}\\{Presenta la lista de un directorio. \textit{Ej. ls -al}} \\ \hline
+ \vspace \item {\tt cd.-}\\{Cambio de directorio. \textit{Ej. cd[location]}}\\ \hline
+ \vspace \item {\tt file.-}\\{Obtener informacion sobre que tipo de archivo es. \textit{Ej.  file nota.txt}} \\ \hline
+ \vspace \item {{\tt man.-}\\{Busca la pagina del manual para encontrar informacion sobre un comando en especial. \textit{Ej. man cd} }\\ \hline
+ \vspace \item {\tt mkdir.-}\\{Crear un directorio. \textit{Ej. mkdir ~/progfortran}} \\ \hline
+ \vspace \item {\tt rmdir.-}  \\{Borrar un directorio. \textit{Ej. rmdir progfortran}}\\ \hline
+ \vspace \item {\tt touch.-}  \\{Crear un archivo en blanco. \textit{Ej. touch ejemplo1}} \\ \hline
+ \vspace \item {\tt cp.-}  \\{Copiar un archivo o directorio. \textit{Ej. cp nota.txt}}\ \hline
+ \vspace \item {\tt mv.-}  \\{Mover un archivo. \textit{Ej. mv nota.txt progfortran}}\\ \hline
+ \vspace \item {\\t rm.-}  \\{borrar un archivo. \textit{Ej. rm ejemplo1}}\\ \hline
+ \vspace \item {\tt vi.-} \\{editar un archivo. Esc para salir. \textit{Ej. vi nota.txt}} \\ \hline
+ \vspace \item {\tt cat.-} \\{juntar dos archivos o ver un archivo. \textit{Ej. cat progfortran}} \\ \hline
+ \vspace \item {\tt ls -l.-} \\{ver los perimsos de un archivo. \textit{ Ej. ls -l /home/hjvalenzuela/nota.txt}}\\ \hline
+ \vspace \item {\tt chmod.-} \\{cambiar los permisos de un archivo o directorio.} \\ \hline
+ \vspace \item {\tt sed.-} \\{buscar datos y remplazarlos con otros. \textit{Ej. sed s/uno/dos/g nota.txt}}\\ \hline
+ \vspace \item {\tt uniq.-} \\{borra lineas duplicadas en el archivo/documento. \textit{Ej. uniq nota.txt}}\\ \hline
+ \vspace \item {\tt tac.-} \\{muestra la informacion de un archivo de abajo hacia arriba. \textit{Ej. tac nota.txt}}\\ \hline
+ \vspace \item {\tt egrep.-} \\{ver lineas de datos que siguen un patron. \textit{Ej. egrep [aeiou] nota.txt}}\\ \hline
+ \vspace \item {\tt top.-} \\{ver los programas que esta corriendo. \textit{Ej. top}}\\ \hline
+ \vspace \item {\tt nl.-} \\{numera la lista de datos en tu archivo. \textit{ Ej. nl nota.txt}} \\ \hline
+% pbworks actividad 1
+ \hline
+ \end{enumerate}
+
+
+  
+\end{document}
