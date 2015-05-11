@@ -1,0 +1,54 @@
+  !************************************************  
+  !This program plots projectile motion of an object.  
+  !The program requires user input for initial velocity   
+  !and angle of the object.The algorithm uses a time   
+  !step of 0.01 second i.e. it calculates object's  
+  !location in the x and y plane every 0.01 second.  
+  !**********By: Waleed Ishaque, 2013**************  
+ program projectile_plot  
+       implicit none  
+        
+       real, parameter :: degrad = (4.0*atan(1.0))/180.0
+       real :: Vi, a, t, rad, vx, vy, Xmax, Ymax
+       real, parameter :: g = 9.81  
+       real:: x(150),y(150)  
+       integer :: i 
+
+     
+       write(*,*) 'Enter angle of projectile (Real)'   
+       read *, a  
+       rad=a*degrad 
+
+       write(*,*) 'Enter velocity of projectile (Real)'   
+       read *, Vi   
+       
+       vx=Vi*COS(rad)
+       vy=Vi*SIN(rad)
+       t=2*Vi*sin(rad)*(1/g)
+   
+         
+       open(1, file='proj.dat')   
+         
+       do i=1,300         
+            t = (float(i)*0.01)   
+            x(i) = vx*t   
+            y(i) = (vy*t)-(0.5*g*t*t)   
+ 
+            write(1,*) x(i), y(i)  
+            if (y(i)<0) exit 
+       end do 
+  
+      close(1)   
+
+      Xmax=(vy**2)/(0.5*g)
+      Ymax=x(i)
+
+      if (vx<0) then
+      	  Xmax=0
+      end if   
+      
+      print*, 'Time of flight:', t, 's'
+      print*, 'Maximum height reached:', Ymax, 'm'
+      print*, 'Horizontal range:', Xmax, 'm'
+      
+end program projectile_plot 
